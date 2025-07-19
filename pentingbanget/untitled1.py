@@ -194,7 +194,12 @@ elif menu == "Eksperimen Pythagoras":
         font-size: 30px;
         font-weight: bold;
         color: #3B3B98;
-        margin-bottom: 0.2em;
+        background-color: #F6D6AD;
+        padding: 12px 24px;
+        border-radius: 15px;
+        display: inline-block;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
     }
     .subjudul {
         font-size: 17px;
