@@ -106,12 +106,13 @@ if menu == "Beranda":
 
     st.markdown("""
         <div class='isi'>
-        Setelah menggunakan laboratorium ini, siswa diharapkan mampu:
-        <ul>
-            <li>Menemukan rumus Pythagoras melalui visualisasi segitiga siku-siku secara konkret</li>
-            <li>Memahami dan menjelaskan keterkaitan antara panjang sisi-sisi segitiga tersebut</li>
-        </ul>
-        </div>
+    <p><strong>Pythagenius</strong> adalah aplikasi interaktif yang dirancang untuk membantu kamu menjelajahi dan memahami Teorema Pythagoras secara menyenangkan. Dengan bantuan visualisasi segitiga, kamu bisa melihat langsung bagaimana hubungan antar sisi bekerja dan menemukan rumusnya secara intuitif.</p>
+    Setelah menggunakan laboratorium ini, siswa diharapkan mampu:
+    <ul>
+        <li>Menemukan rumus Pythagoras melalui visualisasi segitiga siku-siku secara konkret</li>
+        <li>Memahami dan menjelaskan keterkaitan antara panjang sisi-sisi segitiga tersebut</li>
+    </ul>
+    </div>
     """, unsafe_allow_html=True)
 
 # Halaman 2: Petunjuk
@@ -162,7 +163,7 @@ elif menu == "Petunjuk Penggunaan":
         </style>
     """, unsafe_allow_html=True)
 
-    st.markdown("<div class='judul-petunjuk'>Petunjuk Penjelajahan Pythagenius</div>", unsafe_allow_html=True)
+    st.markdown("<div class='judul-petunjuk'>PETUNJUK PENJELAJAHAN PYTHAGORAS/div>", unsafe_allow_html=True)
 
     st.markdown("""
         <div class='isi-petunjuk'>
@@ -212,7 +213,7 @@ elif menu == "Eksperimen Pythagoras":
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown("<div class='judul-experimen'>Jelajah Teorema Pythagoras</div>", unsafe_allow_html=True)
+    st.markdown("<div class='judul-experimen'>JELAJAH TEOREMA PYTHAGORAS</div>", unsafe_allow_html=True)
     st.markdown("<div class='subjudul'>Atur panjang sisi siku-siku dan lihat bagaimana sisi miring dihitung dan divisualisasikan.</div>", unsafe_allow_html=True)
 
     a = st.slider("Panjang sisi a (horizontal)", 1, 20, 5)
