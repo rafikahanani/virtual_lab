@@ -11,7 +11,6 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Fungsi untuk menggambar segitiga
 def draw_triangle(a, b):
     c = round((a**2 + b**2)**0.5, 2)
     fig, ax = plt.subplots()
@@ -37,9 +36,9 @@ def draw_triangle(a, b):
     mid_bc = ((B[0] + C[0]) / 2, (B[1] + C[1]) / 2)
     ax.text(mid_bc[0], mid_bc[1] + 0.3, f"c = {c}", ha='center', va='bottom', fontsize=12, color='red')
 
-    # Pengaturan sumbu
-    ax.set_xlim(-2, max(10, a + 2))
-    ax.set_ylim(-2, max(10, b + 2))
+    # Pengaturan sumbu tetap 0 sampai 20
+    ax.set_xlim(0, 20)
+    ax.set_ylim(0, 20)
     ax.set_aspect('equal')
     ax.set_title("Visualisasi Segitiga Pythagoras")
 
@@ -49,7 +48,7 @@ def draw_triangle(a, b):
     ax.set_ylabel("Y")
 
     return fig, c
-    
+
 # Custom global styling
 st.markdown("""
     <style>
