@@ -163,7 +163,7 @@ elif menu == "Petunjuk Penggunaan":
         </style>
     """, unsafe_allow_html=True)
 
-    st.markdown("<div class='judul-petunjuk'>PETUNJUK PENJELAJAHAN PYTHAGORAS/div>", unsafe_allow_html=True)
+    st.markdown("<div class='judul-petunjuk'>PETUNJUK PENJELAJAHAN PYTHAGORAS", unsafe_allow_html=True)
 
     st.markdown("""
         <div class='isi-petunjuk'>
