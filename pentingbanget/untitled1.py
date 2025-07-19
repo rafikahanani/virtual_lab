@@ -146,7 +146,7 @@ if menu == "Beranda":
 
     st.markdown("""
         <div class='isi'>
-    <p><strong>Pythagenius</strong> adalah aplikasi interaktif yang dirancang untuk membantu kamu menjelajahi dan memahami Teorema Pythagoras secara menyenangkan. Dengan bantuan visualisasi segitiga, kamu bisa melihat langsung bagaimana hubungan antar sisi bekerja dan menemukan rumusnya secara intuitif.</p>
+    <p><strong>Pythagenius</strong> adalah aplikasi interaktif yang dirancang untuk membantu siswa menjelajahi dan memahami Teorema Pythagoras secara menyenangkan. Dengan bantuan visualisasi segitiga, siswa bisa melihat langsung hubungan antar sisi pada segitiga siku-siku.</p>
     Setelah menggunakan laboratorium ini, siswa diharapkan mampu:
     <ul>
         <li>Menemukan rumus Pythagoras melalui visualisasi segitiga siku-siku secara konkret</li>
@@ -210,10 +210,10 @@ elif menu == "Petunjuk Penggunaan":
         Untuk memulai penjelajahan teorema Pythagoras menggunakan aplikasi <strong>Pythagenius</strong>, ikuti langkah-langkah berikut:
 
         <ol>
-            <li>Buka menu <strong>Jelajah Teorema Pythagoras</strong> yang tersedia di sisi kiri layar atau bagian atas aplikasi.</li>
+            <li>Buka menu <strong>Jelajah Teorema Pythagoras</strong> yang tersedia di sisi kiri layar.</li>
             <li>Gunakan <em>slider</em> untuk memilih panjang dua sisi siku-siku, yaitu sisi <code>a</code> dan sisi <code>b</code>. Silakan geser sesuai angka yang diinginkan.</li>
-            <li>Amati perubahan visual segitiga yang ditampilkan di layar. Aplikasi akan menampilkan bentuk segitiga lengkap dengan panjang sisi <code>a</code>, <code>b</code>, dan <code>c</code>, serta sudut siku-sikunya.</li>
-            <li>Nilai sisi miring <code>c</code> (hipotenusa) akan dihitung dan ditampilkan secara otomatis berdasarkan input yang diberikan. Proses ini menunjukkan bagaimana teorema Pythagoras bekerja secara langsung.</li>
+            <li>Amati perubahan visual segitiga yang ditampilkan di layar. Aplikasi akan menampilkan bentuk segitiga lengkap dengan panjang sisi <code>a</code>, <code>b</code>, dan <code>c</code>.</li>
+            <li>Nilai sisi miring <code>c</code> (hipotenusa) akan dihitung dan ditampilkan secara otomatis berdasarkan input yang diberikan.</li>
             <li>Lakukan pengulangan dengan memilih nilai yang berbeda untuk <code>a</code> dan <code>b</code>, agar kamu bisa melihat pola yang terbentuk dan memahami hubungan antar sisi dalam berbagai kondisi segitiga.</li>
         </ol>
 
