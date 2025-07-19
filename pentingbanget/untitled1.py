@@ -28,7 +28,7 @@ def draw_triangle(a, b):
 
 # Sidebar navigasi
 st.sidebar.title("Menu Laboratorium")
-menu = st.sidebar.radio("Menu Pembelajaran", ["TUJUAN PEMBELAJARAN", "PETUNJUK PENGGUNAAN", "JELAJAH TEOREMA PYTHAGORAS"])
+menu = st.sidebar.radio(["TUJUAN PEMBELAJARAN", "PETUNJUK PENGGUNAAN", "JELAJAH TEOREMA PYTHAGORAS"])
 
 if menu == "TUJUAN PEMBELAJARAN":
     st.markdown("""
@@ -100,7 +100,7 @@ Untuk memulai penjelajahan teorema Pythagoras menggunakan aplikasi <strong>Pytha
 5. Lakukan pengulangan dengan memilih nilai yang berbeda untuk <code>a</code> dan <code>b</code>, agar kamu bisa melihat pola yang terbentuk dan memahami hubungan antar sisi dalam berbagai kondisi segitiga.
 
 <br>
-Melalui langkah-langkah ini, kamu dapat mempelajari dan menemukan sendiri bagaimana teorema Pythagoras bekerja secara nyata dan menyenangkan.
+Melalui langkah-langkah ini, kamu dapat mempelajari dan menemukan sendiri bagaimana teorema Pythagoras bekerja.
 </div>
 """, unsafe_allow_html=True)
 
