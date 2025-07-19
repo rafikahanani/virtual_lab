@@ -183,15 +183,23 @@ elif menu == "PETUNJUK PENGGUNAAN":
 
 # Halaman 3: Eksperimen
 elif menu == "JELAJAH TEOREMA PYTHAGORAS":
-    st.markdown("""
-    <style>
-    .judul-experimen {
-        font-family: 'Trebuchet MS', sans-serif;
-        font-size: 30px;
-        font-weight: bold;
-        color: #3B3B98;
-        margin-bottom: 0.2em;
-    }
+   st.markdown("""
+<style>
+.judul-experimen-box {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #3B3B98;
+    background-color: #F6D6AD;
+    padding: 12px 24px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+</style>
+<div class='judul-experimen-box'>Jelajah Teorema Pythagoras</div>
+""", unsafe_allow_html=True)
     .subjudul {
         font-size: 17px;
         color: #636e72;
