@@ -99,7 +99,7 @@ st.markdown("""
 
 # Sidebar navigasi
 st.sidebar.title("JELAJAH TEOREMA PYTHAGORAS")
-menu = st.sidebar.radio("Menu", ["Beranda", "Petunjuk Penggunaan", "Eksperimen Pythagoras"])
+menu = st.sidebar.radio("MENU",["Beranda", "Petunjuk Penggunaan", "Eksperimen Pythagoras"])
 
 if menu == "Beranda":
     st.markdown("""
