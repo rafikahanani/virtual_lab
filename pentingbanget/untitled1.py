@@ -58,10 +58,10 @@ def draw_triangle(a, b):
     ax.set_xlim(-5, 20)
     ax.set_ylim(-5, 20)
     ax.set_aspect('equal')
-    ax.set_title("Visualisasi Segitiga Pythagoras")
+    ax.set_title("Visualisasi Segitiga")
     ax.grid(True)
-    ax.set_xlabel("X")
-    ax.set_ylabel("Y")
+    ax.set_xlabel("alas")
+    ax.set_ylabel("tinggi")
 
     return fig, c
 
@@ -264,8 +264,8 @@ elif menu == "Eksperimen Pythagoras":
     st.markdown("<div class='judul-experimen'>JELAJAH TEOREMA PYTHAGORAS</div>", unsafe_allow_html=True)
     st.markdown("<div class='subjudul'>Atur panjang sisi siku-siku dan lihat bagaimana sisi miring dihitung dan divisualisasikan.</div>", unsafe_allow_html=True)
 
-    a = st.slider("Panjang sisi a (horizontal)", 1, 20, 5)
-    b = st.slider("Panjang sisi b (vertikal)", 1, 20, 5)
+    a = st.slider("Panjang sisi a (alas)", 1, 20, 5)
+    b = st.slider("Panjang sisi b (tinggi)", 1, 20, 5)
 
     fig, c = draw_triangle(a, b)
     st.pyplot(fig)
