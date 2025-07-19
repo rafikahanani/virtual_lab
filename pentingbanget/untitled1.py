@@ -11,58 +11,49 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 def draw_triangle(a, b):
-    import matplotlib.pyplot as plt
-    
     c = round((a**2 + b**2)**0.5, 2)
     fig, ax = plt.subplots()
 
-    # Koordinat titik-titik segitiga
+    # Titik-titik segitiga
     A = (0, 0)
     B = (a, 0)
     C = (0, b)
 
     # Gambar segitiga
-    ax.plot([A[0], B[0], C[0], A[0]], [A[1], B[1], C[1], A[1]], color='#3B3B98')
+    ax.plot([A[0], B[0], C[0], A[0]], [A[1], B[1], C[1], A[1]], color='#3B3B98', linewidth=2.5)
     ax.fill([A[0], B[0], C[0]], [A[1], B[1], C[1]], '#74b9ff', alpha=0.4)
 
-    # Ukuran font proporsional (1/5 panjang sisi)
-    font_a = max(a * 0.2, 6)
-    font_b = max(b * 0.2, 6)
-    font_c = max(c * 0.2, 6)
+    # Ukuran font dinamis (1/5 panjang sisi)
+    font_a = max(8, a * 0.2)
+    font_b = max(8, b * 0.2)
+    font_c = max(8, c * 0.2)
 
-    # Titik tengah sisi a (AB)
+    # Label sisi a (AB)
     mid_ab = ((A[0] + B[0]) / 2, (A[1] + B[1]) / 2)
     ax.text(mid_ab[0], mid_ab[1] - 0.5, f"a = {a}", ha='center', va='top', fontsize=font_a, color='#2d3436')
 
-    # Titik tengah sisi b (AC)
+    # Label sisi b (AC)
     mid_ac = ((A[0] + C[0]) / 2, (A[1] + C[1]) / 2)
     ax.text(mid_ac[0] - 0.5, mid_ac[1], f"b = {b}", ha='right', va='center', fontsize=font_b, color='#2d3436')
 
-    # Titik tengah sisi c (BC)
+    # Label sisi c (BC) - di luar sisi, tidak menempel
     mid_bc = ((B[0] + C[0]) / 2, (B[1] + C[1]) / 2)
-
-    # Hitung vektor normal sisi BC (arah tegak lurus keluar segitiga)
     dx = C[0] - B[0]
     dy = C[1] - B[1]
     norm = (dx**2 + dy**2)**0.5
-    offset = 0.5  # jarak label dari garis (bisa diubah)
-
-    # Normalisasi dan buat arah offset (titik bergerak menjauhi segitiga)
-    offset_x = -dy / norm * offset
-    offset_y = dx / norm * offset
-
-    # Tambahkan offset ke posisi teks
-    ax.text(mid_bc[0] + offset_x, mid_bc[1] + offset_y, f"c = {c}",
+    offset = 1.5
+    offset_x = -dy / norm * offset + 0.4  # geser ke kanan
+    offset_y = dx / norm * offset + 0.4   # geser ke atas
+    ax.text(mid_bc[0] + offset_x, mid_bc[1] + offset_y, f"c = {c}", 
             ha='center', va='bottom', fontsize=font_c, color='red')
 
-    # Pengaturan sumbu tetap 0 sampai 20
+    # Sumbu tetap dari 0-20
     ax.set_xlim(-5, 20)
     ax.set_ylim(-5, 20)
     ax.set_aspect('equal')
     ax.set_title("Visualisasi Segitiga Pythagoras")
-
-    # Tampilkan grid dan label sumbu
     ax.grid(True)
     ax.set_xlabel("X")
     ax.set_ylabel("Y")
