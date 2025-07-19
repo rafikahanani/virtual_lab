@@ -43,11 +43,12 @@ def draw_triangle(a, b):
     dx = C[0] - B[0]
     dy = C[1] - B[1]
     norm = (dx**2 + dy**2)**0.5
-    offset = 1.5
-    offset_x = -dy / norm * offset + 0.4  # geser ke kanan
-    offset_y = dx / norm * offset + 0.4   # geser ke atas
+    offset = max(1, c * 0.15)  # offset menyesuaikan panjang c agar proporsional
+    offset_x = -dy / norm * offset  # vektor tegak lurus (kanan/kiri)
+    offset_y = dx / norm * offset   # vektor tegak lurus (atas/bawah)
     ax.text(mid_bc[0] + offset_x, mid_bc[1] + offset_y, f"c = {c}", 
-            ha='center', va='bottom', fontsize=font_c, color='red')
+            ha='center', va='center', fontsize=font_c, color='red')
+
 
     # Sumbu tetap dari 0-20
     ax.set_xlim(-5, 20)
