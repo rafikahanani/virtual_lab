@@ -89,19 +89,14 @@ if menu == "TUJUAN PEMBELAJARAN":
 # Halaman 2: Petunjuk
 elif menu == "PETUNJUK PENGGUNAAN":
     st.title("Petunjuk Penjelajahan Pythagenius")
-    st.write("""
-    
-Untuk memulai penjelajahan teorema Pythagoras menggunakan aplikasi **Pythagenius**, ikuti langkah-langkah berikut: 
-
+    st.write("""Untuk memulai penjelajahan teorema Pythagoras menggunakan aplikasi **Pythagenius**, ikuti langkah-langkah berikut: 
 1. Buka menu **Jelajah Teorema Pythagoras** yang tersedia di sisi kiri layar atau bagian atas aplikasi. Menu ini merupakan pintu awal untuk memahami konsep dasar teorema secara visual dan interaktif.
 2. Gunakan **slider** untuk memilih panjang dua sisi siku-siku, yaitu sisi `a` dan sisi `b`. Silakan geser sesuai angka yang diinginkan. Pilihan ini akan membentuk segitiga siku-siku secara otomatis. 
 3. Amati perubahan visual segitiga yang ditampilkan di layar. Aplikasi akan menampilkan bentuk segitiga lengkap dengan panjang sisi `a`, `b`, dan `c`, serta sudut siku-sikunya.
 4. Nilai sisi miring `c` (hipotenusa) akan dihitung dan ditampilkan secara otomatis berdasarkan input yang diberikan. Proses ini menunjukkan bagaimana teorema Pythagoras bekerja secara langsung.
 5. Lakukan pengulangan dengan memilih nilai yang berbeda untuk `a` dan `b`, agar kamu bisa melihat pola yang terbentuk dan memahami hubungan antar sisi dalam berbagai kondisi segitiga.
 
-Melalui langkah-langkah ini, kamu dapat mempelajari dan menemukan sendiri bagaimana teorema Pythagoras bekerja secara nyata dan menyenangkan.
- 
-    """)
+Melalui langkah-langkah ini, kamu dapat mempelajari dan menemukan sendiri bagaimana teorema Pythagoras bekerja secara nyata dan menyenangkan.""")
 
 # Halaman 3: Eksperimen
 elif menu == "Eksperimen Pythagoras":
