@@ -102,7 +102,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Sidebar navigasi
-st.sidebar.title("JELAJAH TEOREMA PYTHAGORAS")
+st.sidebar.title("PYTHAGENIUS: JELAJAH TEOREMA PYTHAGORAS")
 menu = st.sidebar.radio("MENU",["Beranda", "Petunjuk Penggunaan", "Eksperimen Pythagoras"])
 
 if menu == "Beranda":
