@@ -116,21 +116,70 @@ if menu == "TUJUAN PEMBELAJARAN":
 
 # Halaman 2: Petunjuk
 elif menu == "PETUNJUK PENGGUNAAN":
-    st.title("Petunjuk Penjelajahan Pythagenius")
     st.markdown("""
-<div style="text-align: justify; font-size: 16px; background-color: #f1f2f6; padding: 20px; border-radius: 12px;">
-Untuk memulai penjelajahan teorema Pythagoras menggunakan aplikasi <strong>Pythagenius</strong>, ikuti langkah-langkah berikut:
+        <style>
+        .judul-petunjuk {
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            color: #3B3B98;
+            background-color: #F6D6AD;
+            padding: 12px 24px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
 
-1. Buka menu <strong>Jelajah Teorema Pythagoras</strong> yang tersedia di sisi kiri layar atau bagian atas aplikasi.  
-2. Gunakan <em>slider</em> untuk memilih panjang dua sisi siku-siku, yaitu sisi <code>a</code> dan sisi <code>b</code>. Silakan geser sesuai angka yang diinginkan. Pilihan ini akan membentuk segitiga siku-siku secara otomatis.  
-3. Amati perubahan visual segitiga yang ditampilkan di layar. Aplikasi akan menampilkan bentuk segitiga lengkap dengan panjang sisi <code>a</code>, <code>b</code>, dan <code>c</code>, serta sudut siku-sikunya.  
-4. Nilai sisi miring <code>c</code> (hipotenusa) akan dihitung dan ditampilkan secara otomatis berdasarkan input yang diberikan. Proses ini menunjukkan bagaimana teorema Pythagoras bekerja secara langsung.  
-5. Lakukan pengulangan dengan memilih nilai yang berbeda untuk <code>a</code> dan <code>b</code>, agar kamu bisa melihat pola yang terbentuk dan memahami hubungan antar sisi dalam berbagai kondisi segitiga.
+        .isi-petunjuk {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 16px;
+            text-align: justify;
+            color: #2d3436;
+            background-color: #FFF6E0;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
+            line-height: 1.8;
+        }
 
-<br>
-Melalui langkah-langkah ini, kamu dapat mempelajari dan menemukan sendiri bagaimana teorema Pythagoras bekerja.
-</div>
-""", unsafe_allow_html=True)
+        .isi-petunjuk code {
+            background-color: #ffeaa7;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+
+        .isi-petunjuk em {
+            color: #6c5ce7;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .isi-petunjuk strong {
+            color: #3B3B98;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<div class='judul-petunjuk'>Petunjuk Penjelajahan Pythagenius</div>", unsafe_allow_html=True)
+
+    st.markdown("""
+        <div class='isi-petunjuk'>
+        Untuk memulai penjelajahan teorema Pythagoras menggunakan aplikasi <strong>Pythagenius</strong>, ikuti langkah-langkah berikut:
+
+        <ol>
+            <li>Buka menu <strong>Jelajah Teorema Pythagoras</strong> yang tersedia di sisi kiri layar atau bagian atas aplikasi.</li>
+            <li>Gunakan <em>slider</em> untuk memilih panjang dua sisi siku-siku, yaitu sisi <code>a</code> dan sisi <code>b</code>. Silakan geser sesuai angka yang diinginkan.</li>
+            <li>Amati perubahan visual segitiga yang ditampilkan di layar. Aplikasi akan menampilkan bentuk segitiga lengkap dengan panjang sisi <code>a</code>, <code>b</code>, dan <code>c</code>, serta sudut siku-sikunya.</li>
+            <li>Nilai sisi miring <code>c</code> (hipotenusa) akan dihitung dan ditampilkan secara otomatis berdasarkan input yang diberikan. Proses ini menunjukkan bagaimana teorema Pythagoras bekerja secara langsung.</li>
+            <li>Lakukan pengulangan dengan memilih nilai yang berbeda untuk <code>a</code> dan <code>b</code>, agar kamu bisa melihat pola yang terbentuk dan memahami hubungan antar sisi dalam berbagai kondisi segitiga.</li>
+        </ol>
+
+        Dengan mengikuti langkah-langkah di atas, kamu dapat mempelajari dan menemukan sendiri bagaimana teorema Pythagoras bekerja secara menyenangkan!
+        </div>
+    """, unsafe_allow_html=True)
+
 
 # Halaman 3: Eksperimen
 elif menu == "JELAJAH TEOREMA PYTHAGORAS":
