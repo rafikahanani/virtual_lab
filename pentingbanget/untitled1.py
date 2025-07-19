@@ -43,10 +43,14 @@ def draw_triangle(a, b):
     dx = C[0] - B[0]
     dy = C[1] - B[1]
     norm = (dx**2 + dy**2)**0.5
-    offset = max(1, c * 0.15)  # offset menyesuaikan panjang c agar proporsional
-    offset_x = -dy / norm * offset  # vektor tegak lurus (kanan/kiri)
-    offset_y = dx / norm * offset   # vektor tegak lurus (atas/bawah)
-    ax.text(mid_bc[0] + offset_x, mid_bc[1] + offset_y, f"c = {c}", 
+    offset = max(2, c * 0.2)  # offset diperbesar biar jelas keluar
+
+    # Vektor tegak lurus ke sisi BC yang mengarah ke LUAR segitiga
+    # Kita asumsikan segitiga siku-siku di A (0,0), jadi arah keluar bisa pakai (+dy, -dx)
+    offset_x = dy / norm * offset
+    offset_y = -dx / norm * offset
+
+    ax.text(mid_bc[0] + offset_x, mid_bc[1] + offset_y, f"c = {c}",
             ha='center', va='center', fontsize=font_c, color='red')
 
 
