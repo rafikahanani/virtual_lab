@@ -107,7 +107,7 @@ Melalui langkah-langkah ini, kamu dapat mempelajari dan menemukan sendiri bagaim
 
 # Halaman 3: Eksperimen
 elif menu == "JELAJAH TEOREMA PYTHAGORAS":
-    st.title("🧪 Eksperimen Segitiga Pythagoras")
+    st.title("Jelajah Teorema Pythagoras")
     st.write("Atur panjang sisi siku-siku dan lihat bagaimana sisi miring dihitung dan divisualisasikan.")
 
     a = st.slider("Panjang sisi a (horizontal)", 1, 20, 5)
