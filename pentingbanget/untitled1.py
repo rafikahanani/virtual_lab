@@ -16,18 +16,26 @@ def draw_triangle(a, b):
     c = round((a**2 + b**2)**0.5, 2)
     fig, ax = plt.subplots()
 
+    # Koordinat titik-titik segitiga
+    A = (0, 0)
+    B = (a, 0)
+    C = (0, b)
+
     # Gambar segitiga
-    ax.plot([0, a, 0, 0], [0, 0, b, 0], color='#3B3B98')
-    ax.fill([0, a, 0], [0, 0, b], '#74b9ff', alpha=0.4)
+    ax.plot([A[0], B[0], C[0], A[0]], [A[1], B[1], C[1], A[1]], color='#3B3B98')
+    ax.fill([A[0], B[0], C[0]], [A[1], B[1], C[1]], '#74b9ff', alpha=0.4)
 
-    # Keterangan sisi a (horizontal)
-    ax.text(a / 2, -0.5, f"a = {a}", ha='center', va='top', fontsize=10, color='#2d3436')
+    # Titik tengah sisi a (AB)
+    mid_ab = ((A[0] + B[0]) / 2, (A[1] + B[1]) / 2)
+    ax.text(mid_ab[0], mid_ab[1] - 0.5, f"a = {a}", ha='center', va='top', fontsize=10, color='#2d3436')
 
-    # Keterangan sisi b (vertikal)
-    ax.text(-0.5, b / 2, f"b = {b}", ha='right', va='center', fontsize=10, color='#2d3436')
+    # Titik tengah sisi b (AC)
+    mid_ac = ((A[0] + C[0]) / 2, (A[1] + C[1]) / 2)
+    ax.text(mid_ac[0] - 0.5, mid_ac[1], f"b = {b}", ha='right', va='center', fontsize=10, color='#2d3436')
 
-    # Keterangan sisi c (miring, horizontal aja posisinya)
-    ax.text(a / 2, b / 2 + 0.3, f"c = {c}", ha='center', va='bottom', fontsize=12, color='red')
+    # Titik tengah sisi c (BC)
+    mid_bc = ((B[0] + C[0]) / 2, (B[1] + C[1]) / 2)
+    ax.text(mid_bc[0], mid_bc[1] + 0.3, f"c = {c}", ha='center', va='bottom', fontsize=12, color='red')
 
     # Pengaturan sumbu
     ax.set_xlim(-2, max(10, a + 2))
@@ -41,8 +49,7 @@ def draw_triangle(a, b):
     ax.set_ylabel("Y")
 
     return fig, c
-
-
+    
 # Custom global styling
 st.markdown("""
     <style>
