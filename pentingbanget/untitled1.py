@@ -75,7 +75,7 @@ if menu == "Tujuan Pembelajaran":
         </style>
     """, unsafe_allow_html=True)
 
-    st.markdown("<div class='judul'>🎯 Tujuan Pembelajaran</div>", unsafe_allow_html=True)
+    st.markdown("<div class='judul'> Tujuan Pembelajaran</div>", unsafe_allow_html=True)
 
     st.markdown("""
         <div class='isi'>
