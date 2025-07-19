@@ -28,7 +28,7 @@ def draw_triangle(a, b):
 
 # Sidebar navigasi
 st.sidebar.title("Menu Laboratorium")
-menu = st.sidebar.radio("Pilih Halaman", ["Tujuan Pembelajaran", "Cara Memakai", "Eksperimen Pythagoras"])
+menu = st.sidebar.radio("Menu Pembelajaran", ["TUJUAN PEMBELAJARAN", "PETUNJUK PENGGUNAAN", "JELAJAH TEOREMA PYTHAGORAS"])
 
 if menu == "TUJUAN PEMBELAJARAN":
     st.markdown("""
@@ -100,7 +100,7 @@ Pilihan ini akan membentuk segitiga siku-siku secara otomatis.
 Melalui langkah-langkah ini, kamu dapat mempelajari dan menemukan sendiri bagaimana teorema Pythagoras bekerja secara nyata dan menyenangkan.""")
 
 # Halaman 3: Eksperimen
-elif menu == "Eksperimen Pythagoras":
+elif menu == "JELAJAH TEOREMA PYTHAGORAS":
     st.title("🧪 Eksperimen Segitiga Pythagoras")
     st.write("Atur panjang sisi siku-siku dan lihat bagaimana sisi miring dihitung dan divisualisasikan.")
 
