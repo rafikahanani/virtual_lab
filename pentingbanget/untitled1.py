@@ -24,17 +24,22 @@ def draw_triangle(a, b):
     ax.plot([A[0], B[0], C[0], A[0]], [A[1], B[1], C[1], A[1]], color='#3B3B98')
     ax.fill([A[0], B[0], C[0]], [A[1], B[1], C[1]], '#74b9ff', alpha=0.4)
 
+    # Ukuran font proporsional (1/5 panjang sisi)
+    font_a = max(a * 0.2, 6)
+    font_b = max(b * 0.2, 6)
+    font_c = max(c * 0.2, 6)
+
     # Titik tengah sisi a (AB)
     mid_ab = ((A[0] + B[0]) / 2, (A[1] + B[1]) / 2)
-    ax.text(mid_ab[0], mid_ab[1] - 0.5, f"a = {a}", ha='center', va='top', fontsize=10, color='#2d3436')
+    ax.text(mid_ab[0], mid_ab[1] - 0.5, f"a = {a}", ha='center', va='top', fontsize=font_a, color='#2d3436')
 
     # Titik tengah sisi b (AC)
     mid_ac = ((A[0] + C[0]) / 2, (A[1] + C[1]) / 2)
-    ax.text(mid_ac[0] - 0.5, mid_ac[1], f"b = {b}", ha='right', va='center', fontsize=10, color='#2d3436')
+    ax.text(mid_ac[0] - 0.5, mid_ac[1], f"b = {b}", ha='right', va='center', fontsize=font_b, color='#2d3436')
 
     # Titik tengah sisi c (BC)
     mid_bc = ((B[0] + C[0]) / 2, (B[1] + C[1]) / 2)
-    ax.text(mid_bc[0], mid_bc[1] + 0.3, f"c = {c}", ha='center', va='bottom', fontsize=12, color='red')
+    ax.text(mid_bc[0], mid_bc[1] + 0.3, f"c = {c}", ha='center', va='bottom', fontsize=font_c, color='red')
 
     # Pengaturan sumbu tetap 0 sampai 20
     ax.set_xlim(-5, 20)
