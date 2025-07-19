@@ -103,7 +103,7 @@ st.markdown("""
 
 # Sidebar navigasi
 st.sidebar.title("PYTHAGENIUS: JELAJAH TEOREMA PYTHAGORAS")
-menu = st.sidebar.radio("MENU",["Beranda", "Petunjuk Penggunaan", "Eksperimen Pythagoras"])
+menu = st.sidebar.radio("MENU",["Beranda", "Petunjuk Penggunaan", "Jelajah Teorema"])
 
 if menu == "Beranda":
     st.markdown("""
@@ -210,7 +210,7 @@ elif menu == "Petunjuk Penggunaan":
         Untuk memulai penjelajahan teorema Pythagoras menggunakan aplikasi <strong>Pythagenius</strong>, ikuti langkah-langkah berikut:
 
         <ol>
-            <li>Buka menu <strong>Jelajah Teorema Pythagoras</strong> yang tersedia di sisi kiri layar.</li>
+            <li>Buka menu <strong>Jelajah Teorema</strong> yang tersedia di sisi kiri layar.</li>
             <li>Gunakan <em>slider</em> untuk memilih panjang dua sisi siku-siku, yaitu sisi <code>a</code> dan sisi <code>b</code>. Silakan geser sesuai angka yang diinginkan.</li>
             <li>Amati perubahan visual segitiga yang ditampilkan di layar. Aplikasi akan menampilkan bentuk segitiga lengkap dengan panjang sisi <code>a</code>, <code>b</code>, dan <code>c</code>.</li>
             <li>Nilai sisi miring <code>c</code> (hipotenusa) akan dihitung dan ditampilkan secara otomatis berdasarkan input yang diberikan.</li>
@@ -223,7 +223,7 @@ elif menu == "Petunjuk Penggunaan":
 
 
 # Halaman 3: Eksperimen
-elif menu == "Eksperimen Pythagoras":
+elif menu == "Jelajah Teorema":
     st.markdown("""
     <style>
     .stApp {
