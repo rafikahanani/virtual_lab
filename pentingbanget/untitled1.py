@@ -13,18 +13,38 @@ import numpy as np
 
 # Fungsi untuk menggambar segitiga
 def draw_triangle(a, b):
+    import numpy as np
     c = round((a**2 + b**2)**0.5, 2)
     fig, ax = plt.subplots()
+
+    # Gambar segitiga
     ax.plot([0, a, 0, 0], [0, 0, b, 0], color='#3B3B98')
     ax.fill([0, a, 0], [0, 0, b], '#74b9ff', alpha=0.4)
-    ax.text(a / 2, -1, f"a = {a}", ha='center')
-    ax.text(-1, b / 2, f"b = {b}", va='center', rotation='vertical')
-    ax.text(a / 2.5, b / 2.5, f"c = {c}", fontsize=12, color='red')
-    ax.set_xlim(-2, max(10, a+2))
-    ax.set_ylim(-2, max(10, b+2))
+
+    # Keterangan sisi a (horizontal)
+    ax.text(a / 2, -0.7, f"a = {a}", ha='center', va='top', fontsize=10, color='#2d3436')
+
+    # Keterangan sisi b (vertikal)
+    ax.text(-0.7, b / 2, f"b = {b}", ha='right', va='center', fontsize=10, color='#2d3436')
+
+    # Keterangan sisi c (miring)
+    angle = np.degrees(np.arctan2(b, a))
+    ax.text(a / 2 + 0.2, b / 2 + 0.2, f"c = {c}", fontsize=12, color='red',
+            rotation=angle, rotation_mode='anchor')
+
+    # Atur tampilan
+    ax.set_xlim(-2, max(10, a + 3))
+    ax.set_ylim(-2, max(10, b + 3))
     ax.set_aspect('equal')
     ax.set_title("Visualisasi Segitiga Pythagoras")
+
+    # Tampilkan grid sumbu
+    ax.grid(True)
+    ax.set_xlabel("X")
+    ax.set_ylabel("Y")
+
     return fig, c
+
 
 # Custom global styling
 st.markdown("""
