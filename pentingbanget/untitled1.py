@@ -21,30 +21,26 @@ def draw_triangle(a, b):
     ax.plot([0, a, 0, 0], [0, 0, b, 0], color='#3B3B98')
     ax.fill([0, a, 0], [0, 0, b], '#74b9ff', alpha=0.4)
 
-    # Titik-titik koordinat
-    x_a = a / 2
-    y_b = b / 2
-    x_c = a / 2
-    y_c = b / 2
+    # Keterangan sisi a (horizontal)
+    ax.text(a / 2, -1, f"a = {a}", ha='center', va='top', fontsize=10, color='#2d3436')
 
-    # Label sisi a
-    ax.text(x_a, -0.8, f"a = {a}", ha='center', va='top', fontsize=10, color='#2d3436')
+    # Keterangan sisi b (vertikal)
+    ax.text(-1, b / 2, f"b = {b}", ha='right', va='center', fontsize=10, color='#2d3436')
 
-    # Label sisi b
-    ax.text(-0.8, y_b, f"b = {b}", ha='right', va='center', fontsize=10, color='#2d3436')
-
-    # Label sisi c (dengan rotasi sejajar sisi miring)
+    # Keterangan sisi c (miring) dengan rotasi sejajar sisi
     angle = np.degrees(np.arctan2(b, a))
-    ax.text(a/2 + 0.2, b/2 + 0.2, f"c = {c}", fontsize=10, color='red', rotation=angle, rotation_mode='anchor')
+    ax.text(a / 2 + 0.2, b / 2 + 0.2, f"c = {c}", fontsize=12, color='red',
+            rotation=angle, rotation_mode='anchor')
 
-    # Atur tampilan grafik
+    # Atur tampilan
     ax.set_xlim(-2, max(10, a + 3))
     ax.set_ylim(-2, max(10, b + 3))
     ax.set_aspect('equal')
-    ax.set_title("Visualisasi Segitiga Pythagoras", fontsize=12)
+    ax.set_title("Visualisasi Segitiga Pythagoras")
     ax.axis('off')  # Hilangkan sumbu agar lebih bersih
 
     return fig, c
+
 
 
 # Custom global styling
