@@ -37,8 +37,8 @@ def draw_triangle(a, b):
     ax.text(mid_bc[0], mid_bc[1] + 0.3, f"c = {c}", ha='center', va='bottom', fontsize=12, color='red')
 
     # Pengaturan sumbu tetap 0 sampai 20
-    ax.set_xlim(-2, 20)
-    ax.set_ylim(-2, 20)
+    ax.set_xlim(-5, 20)
+    ax.set_ylim(-5, 20)
     ax.set_aspect('equal')
     ax.set_title("Visualisasi Segitiga Pythagoras")
 
