@@ -137,7 +137,7 @@ elif menu == "Petunjuk Penggunaan":
             font-size: 16px;
             text-align: justify;
             color: #2d3436;
-            background-color: #FFF6E0;
+            background-color: #DFF5F2;
             padding: 20px;
             border-radius: 12px;
             box-shadow: 1px 1px 4px rgba(0,0,0,0.05);
