@@ -62,10 +62,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Sidebar navigasi
-st.sidebar.title("Menu Laboratorium")
-menu = st.sidebar.radio("Menu Laporatorium ini terdiri dari:", ["TUJUAN PEMBELAJARAN", "PETUNJUK PENGGUNAAN", "JELAJAH TEOREMA PYTHAGORAS"])
+st.sidebar.title("JELAJAH TEOREMA PYTHAGORAS")
+menu = st.sidebar.radio("Menu", ["Beranda", "Petunjuk Penggunaan", "Eksperimen Pythagoras"])
 
-if menu == "TUJUAN PEMBELAJARAN":
+if menu == "Beranda":
     st.markdown("""
         <style>
         .judul {
@@ -102,11 +102,11 @@ if menu == "TUJUAN PEMBELAJARAN":
         </style>
     """, unsafe_allow_html=True)
 
-    st.markdown("<div class='judul'> Tujuan Pembelajaran</div>", unsafe_allow_html=True)
+    st.markdown("<div class='judul'> JELAJAH TEOREMA PYTHAGORAS</div>", unsafe_allow_html=True)
 
     st.markdown("""
         <div class='isi'>
-        Setelah menggunakan laboratorium ini, diharapkan dapat:
+        Setelah menggunakan laboratorium ini, siswa diharapkan mampu:
         <ul>
             <li>Menemukan rumus Pythagoras melalui visualisasi segitiga siku-siku secara konkret</li>
             <li>Memahami dan menjelaskan keterkaitan antara panjang sisi-sisi segitiga tersebut</li>
@@ -115,7 +115,7 @@ if menu == "TUJUAN PEMBELAJARAN":
     """, unsafe_allow_html=True)
 
 # Halaman 2: Petunjuk
-elif menu == "PETUNJUK PENGGUNAAN":
+elif menu == "Petunjuk Penggunaan":
     st.markdown("""
         <style>
         .judul-petunjuk {
@@ -182,7 +182,7 @@ elif menu == "PETUNJUK PENGGUNAAN":
 
 
 # Halaman 3: Eksperimen
-elif menu == "JELAJAH TEOREMA PYTHAGORAS":
+elif menu == "Eksperimen Pythagoras":
     st.markdown("""
     <style>
     .judul-experimen {
