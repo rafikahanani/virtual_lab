@@ -33,21 +33,44 @@ menu = st.sidebar.radio("Pilih Halaman", ["Tujuan Pembelajaran", "Cara Memakai",
 if menu == "Tujuan Pembelajaran":
     st.markdown("""
         <style>
-        /* Ubah font dan ukuran judul */
+        /* Background keseluruhan aplikasi */
+        .stApp {
+            background-color: #FAF3E0; /* pastel cream */
+            padding: 2rem;
+        }
+
+        /* Judul */
         .judul {
             font-family: 'Trebuchet MS', sans-serif;
             font-size: 32px;
             font-weight: bold;
-            color: #4B8BBE;
-            margin-bottom: 10px;
+            color: #577590; /* soft bluish grey */
+            background-color: #F6D6AD; /* peach pastel */
+            padding: 12px 24px;
+            border-radius: 15px;
+            display: inline-block;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
         }
 
-        /* Ubah font dan ukuran isi */
+        /* Konten teks */
         .isi {
-            font-family: 'Verdana', sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             font-size: 18px;
-            color: #333333;
-            line-height: 1.6;
+            color: #444444;
+            background-color: #DFF5F2; /* pastel mint */
+            padding: 18px;
+            border-radius: 12px;
+            line-height: 1.75;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.05);
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
         }
         </style>
     """, unsafe_allow_html=True)
