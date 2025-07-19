@@ -12,6 +12,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def draw_triangle(a, b):
+    import matplotlib.pyplot as plt
+    
     c = round((a**2 + b**2)**0.5, 2)
     fig, ax = plt.subplots()
 
@@ -39,7 +41,20 @@ def draw_triangle(a, b):
 
     # Titik tengah sisi c (BC)
     mid_bc = ((B[0] + C[0]) / 2, (B[1] + C[1]) / 2)
-    ax.text(mid_bc[0], mid_bc[1] + 0.3, f"c = {c}", ha='center', va='bottom', fontsize=font_c, color='red')
+
+    # Hitung vektor normal sisi BC (arah tegak lurus keluar segitiga)
+    dx = C[0] - B[0]
+    dy = C[1] - B[1]
+    norm = (dx**2 + dy**2)**0.5
+    offset = 0.5  # jarak label dari garis (bisa diubah)
+
+    # Normalisasi dan buat arah offset (titik bergerak menjauhi segitiga)
+    offset_x = -dy / norm * offset
+    offset_y = dx / norm * offset
+
+    # Tambahkan offset ke posisi teks
+    ax.text(mid_bc[0] + offset_x, mid_bc[1] + offset_y, f"c = {c}",
+            ha='center', va='bottom', fontsize=font_c, color='red')
 
     # Pengaturan sumbu tetap 0 sampai 20
     ax.set_xlim(-5, 20)
@@ -53,6 +68,7 @@ def draw_triangle(a, b):
     ax.set_ylabel("Y")
 
     return fig, c
+
 
 # Custom global styling
 st.markdown("""
