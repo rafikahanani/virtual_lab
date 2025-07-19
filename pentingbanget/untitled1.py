@@ -134,8 +134,37 @@ Melalui langkah-langkah ini, kamu dapat mempelajari dan menemukan sendiri bagaim
 
 # Halaman 3: Eksperimen
 elif menu == "JELAJAH TEOREMA PYTHAGORAS":
-    st.title("Jelajah Teorema Pythagoras")
-    st.write("Atur panjang sisi siku-siku dan lihat bagaimana sisi miring dihitung dan divisualisasikan.")
+    st.markdown("""
+    <style>
+    .judul-experimen {
+        font-family: 'Trebuchet MS', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+        color: #3B3B98;
+        margin-bottom: 0.2em;
+    }
+    .subjudul {
+        font-size: 17px;
+        color: #636e72;
+        margin-bottom: 1.5em;
+    }
+    .stSlider > div[data-baseweb="slider"] > div {
+        background-color: #dcdde1;
+        height: 6px;
+        border-radius: 8px;
+    }
+    div[role="slider"] {
+        background-color: #6c5ce7 !important;
+        border: 3px solid #dfe6e9;
+        height: 20px;
+        width: 20px;
+        margin-top: -7px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<div class='judul-experimen'>Jelajah Teorema Pythagoras</div>", unsafe_allow_html=True)
+    st.markdown("<div class='subjudul'>Atur panjang sisi siku-siku dan lihat bagaimana sisi miring dihitung dan divisualisasikan.</div>", unsafe_allow_html=True)
 
     a = st.slider("Panjang sisi a (horizontal)", 1, 20, 5)
     b = st.slider("Panjang sisi b (vertikal)", 1, 20, 5)
