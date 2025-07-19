@@ -30,15 +30,39 @@ def draw_triangle(a, b):
 st.sidebar.title("Menu Laboratorium")
 menu = st.sidebar.radio("Pilih Halaman", ["Tujuan Pembelajaran", "Cara Memakai", "Eksperimen Pythagoras"])
 
-# Halaman 1: Tujuan Pembelajaran
 if menu == "Tujuan Pembelajaran":
-    st.title("🎯 Tujuan Pembelajaran")
-    st.write("""
-    Setelah menggunakan laboratorium ini, siswa diharapkan dapat:
-    - Menemukan rumus phytagoras melalui visual segitiga siku-siku secara konkrit
-    - Memahami dan menjelaskan keterkaitan antara panjang sisi-sisi segitiga tersebut
-    """)
+    st.markdown("""
+        <style>
+        /* Ubah font dan ukuran judul */
+        .judul {
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 32px;
+            font-weight: bold;
+            color: #4B8BBE;
+            margin-bottom: 10px;
+        }
 
+        /* Ubah font dan ukuran isi */
+        .isi {
+            font-family: 'Verdana', sans-serif;
+            font-size: 18px;
+            color: #333333;
+            line-height: 1.6;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<div class='judul'>🎯 Tujuan Pembelajaran</div>", unsafe_allow_html=True)
+
+    st.markdown("""
+        <div class='isi'>
+        Setelah menggunakan laboratorium ini, diharapkan dapat:
+        <ul>
+            <li>Menemukan rumus Pythagoras melalui visualisasi segitiga siku-siku secara konkret</li>
+            <li>Memahami dan menjelaskan keterkaitan antara panjang sisi-sisi segitiga tersebut</li>
+        </ul>
+        </div>
+    """, unsafe_allow_html=True)
 # Halaman 2: Cara Memakai
 elif menu == "Cara Memakai":
     st.title("🛠️ Cara Memakai Laboratorium")
