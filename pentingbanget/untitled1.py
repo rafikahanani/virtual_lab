@@ -186,6 +186,9 @@ elif menu == "Petunjuk Penggunaan":
 elif menu == "Eksperimen Pythagoras":
     st.markdown("""
     <style>
+    .stApp {
+        background-color: #FFF6E0;
+    }
     .judul-experimen {
         font-family: 'Trebuchet MS', sans-serif;
         font-size: 30px;
@@ -204,8 +207,8 @@ elif menu == "Eksperimen Pythagoras":
         border-radius: 8px;
     }
     div[role="slider"] {
-        background-color: #6c5ce7 !important;
-        border: 3px solid #dfe6e9;
+        background-color: #3B3B98 !important;
+        border: 2px solid #dfe6e9;
         height: 20px;
         width: 20px;
         margin-top: -7px;
