@@ -224,7 +224,7 @@ elif menu == "Eksperimen Pythagoras":
         margin-bottom: 1.5em;
     }
     .stSlider > div[data-baseweb="slider"] > div {
-        background-color: #dcdde1;
+        background-color: #DFF5F2;
         height: 6px;
         border-radius: 8px;
     }
