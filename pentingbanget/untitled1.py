@@ -28,7 +28,7 @@ def draw_triangle(a, b):
 
 # Sidebar navigasi
 st.sidebar.title("Menu Laboratorium")
-menu = st.sidebar.radio(["TUJUAN PEMBELAJARAN", "PETUNJUK PENGGUNAAN", "JELAJAH TEOREMA PYTHAGORAS"])
+menu = st.sidebar.radio("Menu Laporatorium ini terdiri dari:", ["TUJUAN PEMBELAJARAN", "PETUNJUK PENGGUNAAN", "JELAJAH TEOREMA PYTHAGORAS"])
 
 if menu == "TUJUAN PEMBELAJARAN":
     st.markdown("""
